@@ -1,0 +1,38 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "version": "1.0.0",
+  "created": "2026-01-20T06:06:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.asianpaints.com/products/paints-and-textures/interior-walls/royale-play.html",
+    "originPage": "Royale Play product landing page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "standard",
+    "purpose": "faq",
+    "imagePattern": "none"
+  },
+  "contentPattern": {
+    "structure": "question + answer pairs",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "FAQ sections",
+      "Q&A content",
+      "Support pages"
+    ],
+    "notSuitableFor": [
+      "Image-based accordions",
+      "Complex nested content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/products/paints-and-textures/interior-walls/royale-play"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-20T06:06:00.000Z"
+  }
+}

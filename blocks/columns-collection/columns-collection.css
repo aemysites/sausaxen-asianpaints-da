@@ -1,0 +1,153 @@
+/*
+ * Columns Collection Block - Asian Paints Style
+ * Two-column layout with text and image grid
+ */
+
+.columns-collection {
+  margin: var(--spacing-m) 0;
+}
+
+.columns-collection > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+/* Text Column */
+.columns-collection > div > div:not(.columns-collection-img-col) {
+  order: 1;
+}
+
+.columns-collection > div > div:not(.columns-collection-img-col) h3 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-s);
+}
+
+.columns-collection > div > div:not(.columns-collection-img-col) p {
+  font-size: var(--body-font-size-s);
+  line-height: 1.6;
+  color: var(--text-color-light);
+  margin: 0 0 var(--spacing-s);
+}
+
+.columns-collection > div > div:not(.columns-collection-img-col) a {
+  display: inline-block;
+  margin-right: var(--spacing-s);
+  padding: 10px 24px;
+  border: 1px solid var(--text-color);
+  border-radius: var(--border-radius-pill);
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.columns-collection > div > div:not(.columns-collection-img-col) a:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+/* Image Grid Column */
+.columns-collection > div > .columns-collection-img-col {
+  order: 0;
+}
+
+/* Image grid container */
+.columns-collection > div > .columns-collection-img-col .columns-collection-img-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xs);
+}
+
+.columns-collection > div > .columns-collection-img-col .columns-collection-img-item {
+  overflow: hidden;
+  border-radius: var(--border-radius-s);
+}
+
+.columns-collection > div > .columns-collection-img-col .columns-collection-img-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.columns-collection > div > .columns-collection-img-col .columns-collection-img-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Single image in column (handles p > picture structure) */
+.columns-collection > div > .columns-collection-img-col p {
+  margin: 0;
+}
+
+.columns-collection > div > .columns-collection-img-col > p:has(picture) {
+  margin-bottom: var(--spacing-s);
+}
+
+.columns-collection > div > .columns-collection-img-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-m);
+  transition: transform var(--transition-slow);
+}
+
+.columns-collection > div > .columns-collection-img-col > p:has(a) {
+  margin-top: var(--spacing-s);
+}
+
+.columns-collection > div > .columns-collection-img-col a {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 1px solid var(--text-color);
+  border-radius: var(--border-radius-pill);
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.columns-collection > div > .columns-collection-img-col a:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+/* Desktop Layout */
+@media (width >= 900px) {
+  .columns-collection > div {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--spacing-xl);
+  }
+
+  .columns-collection > div > div {
+    flex: 1;
+    order: unset;
+  }
+
+  .columns-collection > div > div:not(.columns-collection-img-col) {
+    max-width: 380px;
+  }
+
+  .columns-collection > div > .columns-collection-img-col .columns-collection-img-grid {
+    gap: var(--spacing-s);
+  }
+}
+
+/* Alternating layout - second collection reverses */
+.columns-collection + .columns-collection > div {
+  flex-direction: column;
+}
+
+@media (width >= 900px) {
+  .columns-collection + .columns-collection > div {
+    flex-direction: row-reverse;
+  }
+}

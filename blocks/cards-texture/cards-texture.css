@@ -1,0 +1,127 @@
+/*
+ * Cards Texture Block - Asian Paints Style
+ * Texture showcase cards with image and title overlay
+ */
+
+.cards-texture {
+  margin: var(--spacing-m) 0;
+}
+
+.cards-texture > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-s);
+}
+
+@media (width >= 600px) {
+  .cards-texture > ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-m);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-texture > ul {
+    gap: var(--spacing-l);
+  }
+}
+
+.cards-texture > ul > li {
+  position: relative;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.cards-texture > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Image */
+.cards-texture .cards-texture-card-image {
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-texture > ul > li img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+@media (width >= 600px) {
+  .cards-texture > ul > li img {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+.cards-texture > ul > li:hover img {
+  transform: scale(1.05);
+}
+
+/* Card Body / Text */
+.cards-texture .cards-texture-card-body {
+  padding: var(--spacing-s);
+  background-color: var(--background-color);
+}
+
+.cards-texture .cards-texture-card-body p {
+  margin: 0;
+  font-size: var(--body-font-size-s);
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+.cards-texture .cards-texture-card-body strong {
+  font-weight: 700;
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.cards-texture .cards-texture-card-body a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color var(--transition-base);
+}
+
+.cards-texture .cards-texture-card-body a:hover {
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+/* Title Overlay variant (for trending cards) */
+.cards-texture.overlay > ul > li {
+  border-radius: var(--border-radius-m);
+}
+
+.cards-texture.overlay .cards-texture-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-m);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #ffffff;
+}
+
+.cards-texture.overlay .cards-texture-card-body p {
+  color: #ffffff;
+}
+
+.cards-texture.overlay .cards-texture-card-body strong,
+.cards-texture.overlay .cards-texture-card-body a {
+  color: #ffffff;
+  font-size: var(--body-font-size-m);
+}
+
+.cards-texture.overlay .cards-texture-card-body a:hover {
+  color: var(--accent-primary);
+}
