@@ -1,73 +1,101 @@
 /*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
+ * Asian Paints - Royale Play Design System
+ * Migrated from: https://www.asianpaints.com/products/paints-and-textures/interior-walls/royale-play.html
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* Colors - Asian Paints Brand */
+  --background-color: #fefcf7;
+  --light-color: #fefcf7;
+  --dark-color: #232426;
+  --text-color: #222222;
+  --text-color-light: #666666;
+  --link-color: #222222;
+  --link-hover-color: #000000;
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  /* Section backgrounds */
+  --section-cream: #fefcf7;
+  --section-dark-cream: #ece5d7;
+  --section-dark: #232426;
+  --section-white: #ffffff;
 
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  /* Accent colors - Asian Paints Orange/Gold */
+  --accent-primary: #fcaf17;
+  --accent-primary-hover: #e69d00;
+  --accent-secondary: #222222;
+  --accent-secondary-hover: #000000;
 
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  /* Gradient - Used for headings */
+  --gradient-heading: linear-gradient(270deg, #f8a12e, #be2a1d 50.07%, #45216c 98.1%);
+  --gradient-button: linear-gradient(#fec940, #ff9900);
 
-  /* nav height */
+  /* Fonts */
+  --body-font-family: 'Manrope', manrope-fallback, sans-serif;
+  --heading-font-family: 'Manrope', manrope-fallback, sans-serif;
+
+  /* Body sizes */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+
+  /* Heading sizes - Mobile first */
+  --heading-font-size-xxl: 32px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* Nav height */
   --nav-height: 64px;
   --header-height: var(--nav-height);
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 40px;
+  --spacing-xl: 60px;
+  --spacing-xxl: 80px;
+
+  /* Border radius */
+  --border-radius-s: 4px;
+  --border-radius-m: 8px;
+  --border-radius-l: 20px;
+  --border-radius-pill: 45px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* fallback fonts */
+/* Fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
+  font-family: manrope-fallback;
+  size-adjust: 100%;
   src: local('Arial');
 }
 
 @media (width >= 900px) {
   :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
+    /* Body sizes - Desktop */
+    --body-font-size-m: 16px;
+    --body-font-size-s: 14px;
+    --body-font-size-xs: 12px;
 
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
+    /* Heading sizes - Desktop */
+    --heading-font-size-xxl: 48px;
     --heading-font-size-xl: 36px;
     --heading-font-size-l: 28px;
     --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+    --heading-font-size-s: 18px;
+    --heading-font-size-xs: 16px;
   }
 }
 
@@ -77,7 +105,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
+  font-size: var(--body-font-size-s);
   line-height: 1.6;
 }
 
@@ -99,6 +127,7 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
+/* Typography */
 h1,
 h2,
 h3,
@@ -108,17 +137,27 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
   scroll-margin: 40px;
+  color: var(--text-color);
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 { font-size: var(--heading-font-size-xxl); font-weight: 800; }
+h2 { font-size: var(--heading-font-size-xl); font-weight: 800; }
+h3 { font-size: var(--heading-font-size-l); font-weight: 700; }
+h4 { font-size: var(--heading-font-size-m); font-weight: 700; }
+h5 { font-size: var(--heading-font-size-s); font-weight: 600; }
+h6 { font-size: var(--heading-font-size-xs); font-weight: 600; }
+
+/* Gradient text for headings */
+.gradient-text,
+h2.gradient-text {
+  background: var(--gradient-heading);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 p,
 dl,
@@ -137,7 +176,7 @@ pre {
 
 pre {
   padding: 16px;
-  border-radius: 8px;
+  border-radius: var(--border-radius-m);
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
@@ -154,11 +193,12 @@ button {
   font: inherit;
 }
 
-/* links */
+/* Links */
 a:any-link {
   color: var(--link-color);
   text-decoration: none;
   overflow-wrap: break-word;
+  transition: color var(--transition-base);
 }
 
 a:hover {
@@ -166,7 +206,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* buttons */
+/* Buttons - Primary (Orange/Gold) */
 a.button:any-link,
 button {
   box-sizing: border-box;
@@ -174,27 +214,29 @@ button {
   max-width: 100%;
   margin: 12px 0;
   border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  border-radius: var(--border-radius-l);
+  padding: 10px 30px;
   font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: var(--body-font-size-s);
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: var(--accent-primary);
+  color: var(--dark-color);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: all var(--transition-base);
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--accent-primary-hover);
   cursor: pointer;
 }
 
@@ -202,13 +244,42 @@ button:disabled,
 button:disabled:hover {
   background-color: var(--light-color);
   cursor: unset;
+  opacity: 0.6;
 }
 
+/* Buttons - Secondary (Outline) */
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
+  background-color: transparent;
+  border: 1px solid currentcolor;
   color: var(--text-color);
+}
+
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+/* Buttons - Light variant (for dark backgrounds) */
+a.button.light,
+button.light {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+a.button.light:hover,
+button.light:hover {
+  background-color: #ffffff;
+  color: var(--dark-color);
+}
+
+/* Buttons - Pill style */
+a.button.pill,
+button.pill {
+  border-radius: var(--border-radius-pill);
+  padding: 12px 18px;
 }
 
 main img {
@@ -228,9 +299,10 @@ main img {
   width: 100%;
 }
 
-/* sections */
+/* Sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
+  padding: var(--spacing-l) 0;
 }
 
 main > .section > div {
@@ -241,22 +313,103 @@ main > .section > div {
 
 main > .section:first-of-type {
   margin-top: 0;
+  padding-top: 0;
 }
 
 @media (width >= 900px) {
   main > .section > div {
     padding: 0 32px;
   }
+
+  main > .section {
+    padding: var(--spacing-xl) 0;
+  }
 }
 
-/* section metadata */
+/* Section variants based on section metadata */
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
-  padding: 40px 0;
+  padding: var(--spacing-l) 0;
+}
+
+/* Cream background section */
+main .section.cream {
+  background-color: var(--section-cream);
+}
+
+/* Dark cream background section - "Trending Now" style */
+main .section.dark-cream {
+  background-color: var(--section-dark-cream);
+}
+
+/* Dark background section */
+main .section.dark {
+  background-color: var(--section-dark);
+  color: #ffffff;
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6 {
+  color: #ffffff;
+}
+
+main .section.dark a:any-link {
+  color: #ffffff;
+}
+
+main .section.dark a.button:any-link {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+main .section.dark a.button:hover {
+  background-color: #ffffff;
+  color: var(--dark-color);
+}
+
+/* White background section */
+main .section.white {
+  background-color: var(--section-white);
 }
 
 .section.hidden {
   display: none;
+}
+
+/* Section heading with gradient */
+main .section h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-m);
+}
+
+/* Apply gradient to section headings in cream/dark-cream sections */
+main .section.cream h2,
+main .section.dark-cream h2 {
+  background: var(--gradient-heading);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Centered section intro text */
+main .section > div > p:first-of-type {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-color-light);
+}
+
+/* Centered CTA after intro text */
+main .section > div > p:nth-of-type(2):has(a.button) {
+  text-align: center;
 }
