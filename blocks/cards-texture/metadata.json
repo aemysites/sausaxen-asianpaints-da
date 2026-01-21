@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-texture",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-01-20T06:06:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.asianpaints.com/products/paints-and-textures/interior-walls/royale-play.html",
+    "originPage": "Royale Play product landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark-cream",
+    "density": "grid-4",
+    "purpose": "texture-showcase",
+    "imagePattern": "large-with-overlay"
+  },
+  "contentPattern": {
+    "structure": "image + title overlay",
+    "buttonCount": 0,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "Product texture showcases",
+      "Image galleries with title overlays",
+      "Feature highlights with images"
+    ],
+    "notSuitableFor": [
+      "Text-heavy card grids",
+      "Cards with long descriptions"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/products/paints-and-textures/interior-walls/royale-play"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-20T06:06:00.000Z"
+  }
+}

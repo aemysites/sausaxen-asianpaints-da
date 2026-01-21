@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-collection",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-01-20T06:06:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.asianpaints.com/products/paints-and-textures/interior-walls/royale-play.html",
+    "originPage": "Royale Play product landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "cream",
+    "density": "spacious",
+    "purpose": "collection-showcase",
+    "imagePattern": "mosaic-grid"
+  },
+  "contentPattern": {
+    "structure": "text-content + image-grid OR image-grid + text-content",
+    "buttonCount": 2,
+    "imageCount": 8
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "Product collection showcases",
+      "Feature sections with image grids",
+      "Content with downloadable assets"
+    ],
+    "notSuitableFor": [
+      "Simple two-column text layouts",
+      "Single image with text"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/products/paints-and-textures/interior-walls/royale-play"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-20T06:06:00.000Z"
+  }
+}
