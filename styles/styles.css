@@ -413,3 +413,13 @@ main .section > div > p:first-of-type {
 main .section > div > p:nth-of-type(2):has(a.button) {
   text-align: center;
 }
+
+/* Hide metadata block - processed by scripts */
+.metadata {
+  display: none;
+}
+
+/* Hide section-metadata block */
+.section-metadata {
+  display: none;
+}
