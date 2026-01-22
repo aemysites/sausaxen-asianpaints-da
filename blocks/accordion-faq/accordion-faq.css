@@ -105,3 +105,13 @@
   color: var(--text-color-light);
   font-size: var(--body-font-size-s);
 }
+
+/* Hyperlink styling in FAQ answers */
+.accordion-faq a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.accordion-faq a:hover {
+  color: #004499;
+}

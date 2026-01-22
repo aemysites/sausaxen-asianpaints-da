@@ -1,26 +1,54 @@
 /*
- * Accordion FAQ Block
- * Recreate an accordion for FAQ sections
- * https://www.hlx.live/developer/block-collection/accordion
+ * Accordion FAQ Block - Asian Paints Style
+ * Transforms FAQ content into expandable details/summary elements
+ * Content model: alternating rows of questions and answers
  */
 
-import { moveInstrumentation } from '../../scripts/scripts.js';
-
 export default function decorate(block) {
-  [...block.children].forEach((row) => {
-    // decorate accordion item label
-    const label = row.children[0];
+  const rows = [...block.children];
+
+  // Clear the block
+  block.innerHTML = '';
+
+  // Add CSS counter for numbering
+  let questionNumber = 0;
+
+  // Process pairs of rows (question, answer)
+  for (let i = 0; i < rows.length; i += 2) {
+    const questionRow = rows[i];
+    const answerRow = rows[i + 1];
+
+    if (!questionRow) continue;
+
+    // Get question text
+    const questionText = questionRow.textContent.trim();
+    if (!questionText) continue;
+
+    questionNumber += 1;
+
+    // Create details element
+    const details = document.createElement('details');
+    details.className = 'accordion-faq-item';
+
+    // Open first item by default
+    if (questionNumber === 1) {
+      details.setAttribute('open', '');
+    }
+
+    // Create summary with numbered question
     const summary = document.createElement('summary');
     summary.className = 'accordion-faq-item-label';
-    summary.append(...label.childNodes);
-    // decorate accordion item body
-    const body = row.children[1];
-    body.className = 'accordion-faq-item-body';
-    // decorate accordion item
-    const details = document.createElement('details');
-    moveInstrumentation(row, details);
-    details.className = 'accordion-faq-item';
-    details.append(summary, body);
-    row.replaceWith(details);
-  });
+    summary.textContent = `${questionNumber}. ${questionText}`;
+    details.appendChild(summary);
+
+    // Create answer body
+    if (answerRow) {
+      const body = document.createElement('div');
+      body.className = 'accordion-faq-item-body';
+      body.innerHTML = answerRow.innerHTML;
+      details.appendChild(body);
+    }
+
+    block.appendChild(details);
+  }
 }
