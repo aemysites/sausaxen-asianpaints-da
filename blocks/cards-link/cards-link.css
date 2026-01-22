@@ -1,6 +1,6 @@
 /*
- * Cards Link Block - Linked image cards with title
- * For city selection and expertise categories
+ * Cards Link Block - Linked image cards with title overlay
+ * For city selection and expertise categories (carousel style)
  */
 
 .cards-link {
@@ -8,6 +8,7 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  padding-bottom: var(--spacing-s);
 }
 
 .cards-link::-webkit-scrollbar {
@@ -25,22 +26,30 @@
 
 @media (width >= 900px) {
   .cards-link > ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-m);
   }
 }
 
 .cards-link > ul > li {
-  flex: 0 0 180px;
-  background-color: var(--background-color);
+  flex: 0 0 160px;
+  position: relative;
   border-radius: var(--border-radius-m);
   overflow: hidden;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
+@media (width >= 600px) {
+  .cards-link > ul > li {
+    flex: 0 0 180px;
+  }
+}
+
 @media (width >= 900px) {
   .cards-link > ul > li {
-    flex: unset;
+    flex: 0 0 200px;
   }
 }
 
@@ -49,7 +58,7 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* Card Image */
+/* Card Image - Full background */
 .cards-link .cards-link-card-image {
   line-height: 0;
   overflow: hidden;
@@ -57,37 +66,56 @@
 
 .cards-link > ul > li img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   transition: transform var(--transition-slow);
+  display: block;
 }
 
 .cards-link > ul > li:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* Card Body */
+/* Card Body - Overlay on image */
 .cards-link .cards-link-card-body {
-  padding: var(--spacing-s) var(--spacing-m);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-m) var(--spacing-s);
+  background: linear-gradient(to top, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 30%) 60%, transparent 100%);
   text-align: center;
-  background-color: var(--background-color);
+  pointer-events: none;
 }
 
 .cards-link .cards-link-card-body h4,
 .cards-link .cards-link-card-body p {
   margin: 0;
-  font-size: var(--body-font-size-s);
-  font-weight: 600;
-  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
 }
 
 .cards-link .cards-link-card-body a {
-  color: var(--text-color);
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: var(--body-font-size-m);
   transition: color var(--transition-base);
+  pointer-events: auto;
 }
 
 .cards-link .cards-link-card-body a:hover {
   color: var(--accent-primary);
+  text-decoration: none;
+}
+
+/* Make entire card clickable */
+.cards-link > ul > li {
+  cursor: pointer;
+}
+
+.cards-link > ul > li a {
+  display: block;
 }

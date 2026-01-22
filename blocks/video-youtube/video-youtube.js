@@ -39,7 +39,16 @@ const loadVideoEmbed = (block, link, autoplay) => {
 
 export default async function decorate(block) {
   const placeholder = block.querySelector('picture');
-  const link = block.querySelector('a')?.href;
+  let link = block.querySelector('a')?.href;
+
+  // If no anchor found, try to find YouTube URL in text content
+  if (!link) {
+    const textContent = block.textContent;
+    const youtubeMatch = textContent.match(/https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)[\w-]+/);
+    if (youtubeMatch) {
+      link = youtubeMatch[0];
+    }
+  }
 
   if (!link) {
     // eslint-disable-next-line no-console

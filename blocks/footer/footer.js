@@ -14,7 +14,13 @@ export default async function decorate(block) {
   // decorate footer DOM
   block.textContent = '';
   const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+
+  if (fragment) {
+    while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+  } else {
+    // Fallback content if fragment fails to load
+    footer.innerHTML = '<p>© 2026 Asian Paints Ltd. All rights reserved.</p>';
+  }
 
   block.append(footer);
 }
