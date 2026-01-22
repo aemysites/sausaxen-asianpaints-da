@@ -42,6 +42,7 @@ export default async function decorate(block) {
   const link = block.querySelector('a')?.href;
 
   if (!link) {
+    // eslint-disable-next-line no-console
     console.warn('Video block: No video link found');
     return;
   }

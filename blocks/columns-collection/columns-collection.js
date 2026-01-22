@@ -10,7 +10,8 @@ export default function decorate(block) {
         // Check if column is primarily images (has pictures and minimal text content)
         const hasHeading = col.querySelector('h1, h2, h3, h4, h5, h6');
         const textContent = col.textContent.trim();
-        const isImageColumn = !hasHeading && (pics.length > 1 || (pics.length === 1 && textContent.length < 50));
+        const isSingleImageWithMinimalText = pics.length === 1 && textContent.length < 50;
+        const isImageColumn = !hasHeading && (pics.length > 1 || isSingleImageWithMinimalText);
 
         if (isImageColumn) {
           col.classList.add('columns-collection-img-col');

@@ -8,11 +8,11 @@
   --background-color: #fefcf7;
   --light-color: #fefcf7;
   --dark-color: #232426;
-  --text-color: #222222;
-  --text-color-light: #666666;
+  --text-color: #222;
+  --text-color-light: #666;
   --text-color-muted: #8c8e90;
-  --link-color: #222222;
-  --link-hover-color: #000000;
+  --link-color: #222;
+  --link-hover-color: #000;
 
   /* Section backgrounds */
   --section-cream: #fefcf7;
@@ -20,22 +20,22 @@
   --section-peach: #fff7e8;
   --section-dark-cream: #ece5d7;
   --section-dark: #232426;
-  --section-white: #ffffff;
+  --section-white: #fff;
   --section-light-gray: #f5f5f5;
   --section-accent: #e0ecf9;
 
   /* Accent colors - Asian Paints Orange/Gold */
   --accent-primary: #fcaf17;
   --accent-primary-hover: #e69d00;
-  --accent-secondary: #222222;
-  --accent-secondary-hover: #000000;
+  --accent-secondary: #222;
+  --accent-secondary-hover: #000;
   --accent-red: #ee4137;
   --accent-orange: #f47838;
   --accent-brown: #5d4f43;
 
   /* Gradient - Used for headings */
   --gradient-heading: linear-gradient(270deg, #f8a12e, #be2a1d 50.07%, #45216c 98.1%);
-  --gradient-button: linear-gradient(#fec940, #ff9900);
+  --gradient-button: linear-gradient(#fec940, #f90);
 
   /* Fonts */
   --body-font-family: 'Manrope', manrope-fallback, sans-serif;
@@ -78,9 +78,9 @@
   --transition-slow: 0.3s ease;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.15);
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 10%);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 10%);
+  --shadow-lg: 0 10px 24px rgb(0 0 0 / 15%);
 }
 
 /* Fallback fonts */
@@ -151,18 +151,40 @@ h6 {
   color: var(--text-color);
 }
 
-h1 { font-size: var(--heading-font-size-xxl); font-weight: 800; }
-h2 { font-size: var(--heading-font-size-xl); font-weight: 800; }
-h3 { font-size: var(--heading-font-size-l); font-weight: 700; }
-h4 { font-size: var(--heading-font-size-m); font-weight: 700; }
-h5 { font-size: var(--heading-font-size-s); font-weight: 600; }
-h6 { font-size: var(--heading-font-size-xs); font-weight: 600; }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+  font-weight: 800;
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+  font-weight: 700;
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+  font-weight: 600;
+}
 
 /* Gradient text for headings */
 .gradient-text,
 h2.gradient-text {
   background: var(--gradient-heading);
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -273,13 +295,13 @@ button.secondary:hover {
 a.button.light,
 button.light {
   background-color: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 a.button.light:hover,
 button.light:hover {
-  background-color: #ffffff;
+  background-color: #fff;
   color: var(--dark-color);
 }
 
@@ -368,7 +390,7 @@ main .section.dark-cream {
 /* Dark background section */
 main .section.dark {
   background-color: var(--section-dark);
-  color: #ffffff;
+  color: #fff;
 }
 
 main .section.dark h1,
@@ -377,21 +399,21 @@ main .section.dark h3,
 main .section.dark h4,
 main .section.dark h5,
 main .section.dark h6 {
-  color: #ffffff;
+  color: #fff;
 }
 
 main .section.dark a:any-link {
-  color: #ffffff;
+  color: #fff;
 }
 
 main .section.dark a.button:any-link {
   background-color: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 main .section.dark a.button:hover {
-  background-color: #ffffff;
+  background-color: #fff;
   color: var(--dark-color);
 }
 
@@ -425,6 +447,7 @@ main .section.light-gray {
 }
 
 /* Section heading with gradient */
+/* stylelint-disable-next-line no-descending-specificity */
 main .section h2 {
   text-align: center;
   margin-bottom: var(--spacing-m);
@@ -434,7 +457,6 @@ main .section h2 {
 main .section.cream h2,
 main .section.dark-cream h2 {
   background: var(--gradient-heading);
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;

@@ -81,6 +81,7 @@
 }
 
 /* Single image in column (handles p > picture structure) */
+/* stylelint-disable-next-line no-descending-specificity */
 .columns-collection > div > .columns-collection-img-col p {
   margin: 0;
 }
@@ -89,6 +90,7 @@
   margin-bottom: var(--spacing-s);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .columns-collection > div > .columns-collection-img-col img {
   display: block;
   width: 100%;
@@ -101,6 +103,7 @@
   margin-top: var(--spacing-s);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .columns-collection > div > .columns-collection-img-col a {
   display: inline-block;
   padding: 10px 24px;
@@ -113,6 +116,7 @@
   transition: all var(--transition-base);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .columns-collection > div > .columns-collection-img-col a:hover {
   background-color: var(--text-color);
   color: var(--background-color);
@@ -142,6 +146,7 @@
 }
 
 /* Alternating layout - second collection reverses */
+/* stylelint-disable-next-line no-descending-specificity */
 .columns-collection + .columns-collection > div {
   flex-direction: column;
 }

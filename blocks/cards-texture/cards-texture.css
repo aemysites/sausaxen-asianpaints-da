@@ -129,8 +129,8 @@
   left: 0;
   right: 0;
   padding: var(--spacing-m);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
-  color: #ffffff;
+  background: linear-gradient(to top, rgb(0 0 0 / 80%) 0%, rgb(0 0 0 / 40%) 60%, transparent 100%);
+  color: #fff;
   transform: translateY(calc(100% - 60px));
   transition: transform var(--transition-base);
 }
@@ -140,7 +140,7 @@
 }
 
 .cards-texture.overlay .cards-texture-card-body p {
-  color: #ffffff;
+  color: #fff;
   opacity: 0;
   transition: opacity var(--transition-base);
 }
@@ -151,7 +151,7 @@
 
 .cards-texture.overlay .cards-texture-card-body strong,
 .cards-texture.overlay .cards-texture-card-body a {
-  color: #ffffff;
+  color: #fff;
   font-size: var(--body-font-size-m);
   font-weight: 700;
 }
@@ -161,6 +161,7 @@
 }
 
 /* Pill button style for card links */
+/* stylelint-disable no-descending-specificity */
 .cards-texture .cards-texture-card-body a.button,
 .cards-texture .cards-texture-card-body p:has(a:only-child) a {
   display: inline-block;
