@@ -43,10 +43,10 @@ export default async function decorate(block) {
 
   // If no anchor found, try to find YouTube URL in text content
   if (!link) {
-    const textContent = block.textContent;
+    const { textContent } = block;
     const youtubeMatch = textContent.match(/https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)[\w-]+/);
     if (youtubeMatch) {
-      link = youtubeMatch[0];
+      [link] = youtubeMatch;
     }
   }
 

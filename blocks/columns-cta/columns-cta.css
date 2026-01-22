@@ -8,6 +8,7 @@
   padding: var(--spacing-xl) var(--spacing-l);
   background-color: var(--section-accent);
   border-radius: var(--border-radius-l);
+  overflow: hidden;
 }
 
 .columns-cta > div {
@@ -28,6 +29,7 @@
 .columns-cta .columns-cta-img-col {
   flex: 0 0 auto;
   max-width: 300px;
+  position: relative;
 }
 
 @media (width >= 900px) {
@@ -39,7 +41,8 @@
 .columns-cta .columns-cta-img-col img {
   width: 100%;
   height: auto;
-  border-radius: var(--border-radius-m);
+  border-radius: var(--border-radius-l);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Content Column */
@@ -91,19 +94,5 @@
 .columns-cta a.button:hover {
   background-color: var(--accent-primary-hover);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-/* Make section more prominent */
-.columns-cta {
-  overflow: hidden;
-}
-
-.columns-cta .columns-cta-img-col {
-  position: relative;
-}
-
-.columns-cta .columns-cta-img-col img {
-  border-radius: var(--border-radius-l);
   box-shadow: var(--shadow-lg);
 }
