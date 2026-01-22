@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-steps",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-01-22T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.asianpaints.com/painting-contractors.html",
+    "originPage": "Painting contractors landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "process-steps",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "number + heading + description",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "How It Works sections",
+      "Process step explanations",
+      "Numbered instructions",
+      "Onboarding flows"
+    ],
+    "notSuitableFor": [
+      "Product grids",
+      "Image-heavy galleries",
+      "Non-sequential content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/painting-contractors"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-22T00:00:00.000Z"
+  }
+}

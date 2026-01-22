@@ -1,0 +1,93 @@
+/*
+ * Cards Link Block - Linked image cards with title
+ * For city selection and expertise categories
+ */
+
+.cards-link {
+  margin: var(--spacing-l) 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.cards-link::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-link > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--spacing-m);
+  min-width: min-content;
+}
+
+@media (width >= 900px) {
+  .cards-link > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.cards-link > ul > li {
+  flex: 0 0 180px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+@media (width >= 900px) {
+  .cards-link > ul > li {
+    flex: unset;
+  }
+}
+
+.cards-link > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Image */
+.cards-link .cards-link-card-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.cards-link > ul > li img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.cards-link > ul > li:hover img {
+  transform: scale(1.05);
+}
+
+/* Card Body */
+.cards-link .cards-link-card-body {
+  padding: var(--spacing-s) var(--spacing-m);
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.cards-link .cards-link-card-body h4,
+.cards-link .cards-link-card-body p {
+  margin: 0;
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.cards-link .cards-link-card-body a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.cards-link .cards-link-card-body a:hover {
+  color: var(--accent-primary);
+}

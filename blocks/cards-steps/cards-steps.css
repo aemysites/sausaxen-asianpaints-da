@@ -1,0 +1,80 @@
+/*
+ * Cards Steps Block - Numbered process steps
+ * For "How It Works" style step-by-step sections
+ */
+
+.cards-steps {
+  margin: var(--spacing-l) 0;
+}
+
+.cards-steps > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+@media (width >= 900px) {
+  .cards-steps > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-l);
+  }
+}
+
+.cards-steps > ul > li {
+  display: flex;
+  gap: var(--spacing-m);
+  align-items: flex-start;
+  padding: var(--spacing-m);
+  background-color: var(--background-color);
+  border-radius: var(--border-radius-m);
+  transition: box-shadow var(--transition-base);
+}
+
+.cards-steps > ul > li:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+/* Step Number */
+.cards-steps .cards-steps-number {
+  flex-shrink: 0;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: transparent;
+  color: var(--accent-red);
+  font-size: 28px;
+  font-weight: 300;
+  border-radius: 0;
+  padding-right: var(--spacing-s);
+}
+
+@media (width >= 900px) {
+  .cards-steps .cards-steps-number {
+    font-size: 32px;
+  }
+}
+
+/* Card Body */
+.cards-steps .cards-steps-card-body {
+  flex: 1;
+}
+
+.cards-steps .cards-steps-card-body h3 {
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-xs);
+}
+
+.cards-steps .cards-steps-card-body p {
+  font-size: var(--body-font-size-s);
+  line-height: 1.6;
+  color: var(--text-color-light);
+  margin: 0;
+}

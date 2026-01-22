@@ -1,0 +1,93 @@
+/*
+ * Columns CTA Block - Call-to-action section with image
+ * For promotional banners with search/action
+ */
+
+.columns-cta {
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) var(--spacing-l);
+  background-color: var(--section-accent);
+  border-radius: var(--border-radius-l);
+}
+
+.columns-cta > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+  align-items: center;
+}
+
+@media (width >= 900px) {
+  .columns-cta > div {
+    flex-direction: row;
+    gap: var(--spacing-xl);
+  }
+}
+
+/* Image Column */
+.columns-cta .columns-cta-img-col {
+  flex: 0 0 auto;
+  max-width: 300px;
+}
+
+@media (width >= 900px) {
+  .columns-cta .columns-cta-img-col {
+    max-width: 400px;
+  }
+}
+
+.columns-cta .columns-cta-img-col img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-m);
+}
+
+/* Content Column */
+.columns-cta > div > div:not(.columns-cta-img-col) {
+  flex: 1;
+  text-align: center;
+}
+
+@media (width >= 900px) {
+  .columns-cta > div > div:not(.columns-cta-img-col) {
+    text-align: left;
+  }
+}
+
+.columns-cta h2 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 800;
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-m);
+  line-height: 1.2;
+}
+
+@media (width >= 900px) {
+  .columns-cta h2 {
+    font-size: var(--heading-font-size-xl);
+  }
+}
+
+.columns-cta p {
+  font-size: var(--body-font-size-m);
+  color: var(--text-color-light);
+  margin: 0 0 var(--spacing-m);
+  line-height: 1.6;
+}
+
+.columns-cta a.button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: var(--accent-primary);
+  color: var(--dark-color);
+  border-radius: var(--border-radius-pill);
+  font-weight: 700;
+  font-size: var(--body-font-size-m);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.columns-cta a.button:hover {
+  background-color: var(--accent-primary-hover);
+  transform: translateY(-2px);
+}

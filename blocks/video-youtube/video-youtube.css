@@ -1,0 +1,95 @@
+/*
+ * Video YouTube Block - YouTube video embed with thumbnail
+ * For video showcase sections
+ */
+
+.video-youtube {
+  text-align: center;
+  max-width: 1000px;
+  margin: var(--spacing-l) auto;
+}
+
+.video-youtube[data-embed-loaded='false']:not(.placeholder) {
+  aspect-ratio: 16 / 9;
+}
+
+.video-youtube > div {
+  display: flex;
+  justify-content: center;
+}
+
+.video-youtube video {
+  max-width: 100%;
+}
+
+.video-youtube .video-youtube-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-youtube .video-youtube-placeholder > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.video-youtube[data-embed-loaded='true'] .video-youtube-placeholder,
+.video-youtube[data-embed-loaded='false'] .video-youtube-placeholder + * {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.video-youtube .video-youtube-placeholder picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.video-youtube .video-youtube-placeholder:hover picture img {
+  transform: scale(1.02);
+}
+
+.video-youtube .video-youtube-placeholder-play {
+  z-index: 1;
+}
+
+.video-youtube .video-youtube-placeholder-play button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-lg);
+}
+
+.video-youtube .video-youtube-placeholder-play button:hover {
+  transform: scale(1.1);
+  background-color: var(--accent-primary-hover);
+}
+
+.video-youtube .video-youtube-placeholder-play button::before {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 22px solid var(--dark-color);
+  margin-left: 4px;
+}

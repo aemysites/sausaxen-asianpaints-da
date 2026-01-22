@@ -1,0 +1,58 @@
+/*
+ * Columns Stats Block - Horizontal statistics display
+ * For metrics/numbers showcase sections
+ */
+
+.columns-stats {
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-l) 0;
+}
+
+.columns-stats > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-l);
+  text-align: center;
+}
+
+@media (width >= 600px) {
+  .columns-stats > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.columns-stats .columns-stats-item {
+  padding: var(--spacing-m);
+}
+
+.columns-stats .columns-stats-item p:first-child {
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--accent-brown);
+  margin: 0 0 var(--spacing-xs);
+  line-height: 1.2;
+}
+
+@media (width >= 900px) {
+  .columns-stats .columns-stats-item p:first-child {
+    font-size: 54px;
+  }
+}
+
+.columns-stats .columns-stats-item p:last-child {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 4-column layout specific */
+.columns-stats.columns-stats-4-cols > div {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (width >= 600px) {
+  .columns-stats.columns-stats-4-cols > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

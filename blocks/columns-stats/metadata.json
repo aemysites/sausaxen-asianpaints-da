@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-stats",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-01-22T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.asianpaints.com/painting-contractors.html",
+    "originPage": "Painting contractors landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "statistics-display",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "large number + description text",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "Statistics/metrics sections",
+      "Achievement showcases",
+      "Key numbers display",
+      "Company highlights"
+    ],
+    "notSuitableFor": [
+      "Content with images",
+      "Long text descriptions",
+      "Interactive elements"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/painting-contractors"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-22T00:00:00.000Z"
+  }
+}
