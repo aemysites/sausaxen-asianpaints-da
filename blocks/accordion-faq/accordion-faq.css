@@ -108,10 +108,10 @@
 
 /* Hyperlink styling in FAQ answers */
 .accordion-faq a {
-  color: #0066cc;
+  color: #06c;
   text-decoration: underline;
 }
 
 .accordion-faq a:hover {
-  color: #004499;
+  color: #049;
 }

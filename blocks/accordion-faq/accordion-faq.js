@@ -18,37 +18,36 @@ export default function decorate(block) {
     const questionRow = rows[i];
     const answerRow = rows[i + 1];
 
-    if (!questionRow) continue;
-
     // Get question text
-    const questionText = questionRow.textContent.trim();
-    if (!questionText) continue;
+    const questionText = questionRow ? questionRow.textContent.trim() : '';
 
-    questionNumber += 1;
+    if (questionRow && questionText) {
+      questionNumber += 1;
 
-    // Create details element
-    const details = document.createElement('details');
-    details.className = 'accordion-faq-item';
+      // Create details element
+      const details = document.createElement('details');
+      details.className = 'accordion-faq-item';
 
-    // Open first item by default
-    if (questionNumber === 1) {
-      details.setAttribute('open', '');
+      // Open first item by default
+      if (questionNumber === 1) {
+        details.setAttribute('open', '');
+      }
+
+      // Create summary with numbered question
+      const summary = document.createElement('summary');
+      summary.className = 'accordion-faq-item-label';
+      summary.textContent = `${questionNumber}. ${questionText}`;
+      details.appendChild(summary);
+
+      // Create answer body
+      if (answerRow) {
+        const body = document.createElement('div');
+        body.className = 'accordion-faq-item-body';
+        body.innerHTML = answerRow.innerHTML;
+        details.appendChild(body);
+      }
+
+      block.appendChild(details);
     }
-
-    // Create summary with numbered question
-    const summary = document.createElement('summary');
-    summary.className = 'accordion-faq-item-label';
-    summary.textContent = `${questionNumber}. ${questionText}`;
-    details.appendChild(summary);
-
-    // Create answer body
-    if (answerRow) {
-      const body = document.createElement('div');
-      body.className = 'accordion-faq-item-body';
-      body.innerHTML = answerRow.innerHTML;
-      details.appendChild(body);
-    }
-
-    block.appendChild(details);
   }
 }
