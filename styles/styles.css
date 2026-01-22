@@ -1,6 +1,6 @@
 /*
- * Asian Paints - Royale Play Design System
- * Migrated from: https://www.asianpaints.com/products/paints-and-textures/interior-walls/royale-play.html
+ * Asian Paints - Design System
+ * Pages: Royale Play, Painting Contractors
  */
 
 :root {
@@ -10,20 +10,28 @@
   --dark-color: #232426;
   --text-color: #222222;
   --text-color-light: #666666;
+  --text-color-muted: #8c8e90;
   --link-color: #222222;
   --link-hover-color: #000000;
 
   /* Section backgrounds */
   --section-cream: #fefcf7;
+  --section-warm-cream: #fef9f2;
+  --section-peach: #fff7e8;
   --section-dark-cream: #ece5d7;
   --section-dark: #232426;
   --section-white: #ffffff;
+  --section-light-gray: #f5f5f5;
+  --section-accent: #e0ecf9;
 
   /* Accent colors - Asian Paints Orange/Gold */
   --accent-primary: #fcaf17;
   --accent-primary-hover: #e69d00;
   --accent-secondary: #222222;
   --accent-secondary-hover: #000000;
+  --accent-red: #ee4137;
+  --accent-orange: #f47838;
+  --accent-brown: #5d4f43;
 
   /* Gradient - Used for headings */
   --gradient-heading: linear-gradient(270deg, #f8a12e, #be2a1d 50.07%, #45216c 98.1%);
@@ -390,6 +398,26 @@ main .section.dark a.button:hover {
 /* White background section */
 main .section.white {
   background-color: var(--section-white);
+}
+
+/* Accent background section (light blue) */
+main .section.accent {
+  background-color: var(--section-accent);
+}
+
+/* Warm cream background section */
+main .section.warm-cream {
+  background-color: var(--section-warm-cream);
+}
+
+/* Peach background section */
+main .section.peach {
+  background-color: var(--section-peach);
+}
+
+/* Light gray background section */
+main .section.light-gray {
+  background-color: var(--section-light-gray);
 }
 
 .section.hidden {

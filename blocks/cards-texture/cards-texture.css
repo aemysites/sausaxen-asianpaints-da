@@ -100,6 +100,27 @@
 /* Title Overlay variant (for trending cards) */
 .cards-texture.overlay > ul > li {
   border-radius: var(--border-radius-m);
+  min-height: 280px;
+}
+
+@media (width >= 600px) {
+  .cards-texture.overlay > ul > li {
+    min-height: 320px;
+  }
+}
+
+.cards-texture.overlay .cards-texture-card-image {
+  position: absolute;
+  inset: 0;
+}
+
+.cards-texture.overlay > ul > li img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: unset;
 }
 
 .cards-texture.overlay .cards-texture-card-body {
@@ -108,20 +129,54 @@
   left: 0;
   right: 0;
   padding: var(--spacing-m);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
   color: #ffffff;
+  transform: translateY(calc(100% - 60px));
+  transition: transform var(--transition-base);
+}
+
+.cards-texture.overlay > ul > li:hover .cards-texture-card-body {
+  transform: translateY(0);
 }
 
 .cards-texture.overlay .cards-texture-card-body p {
   color: #ffffff;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.cards-texture.overlay > ul > li:hover .cards-texture-card-body p {
+  opacity: 1;
 }
 
 .cards-texture.overlay .cards-texture-card-body strong,
 .cards-texture.overlay .cards-texture-card-body a {
   color: #ffffff;
   font-size: var(--body-font-size-m);
+  font-weight: 700;
 }
 
 .cards-texture.overlay .cards-texture-card-body a:hover {
   color: var(--accent-primary);
+}
+
+/* Pill button style for card links */
+.cards-texture .cards-texture-card-body a.button,
+.cards-texture .cards-texture-card-body p:has(a:only-child) a {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: var(--accent-primary);
+  color: var(--dark-color);
+  border-radius: var(--border-radius-pill);
+  font-weight: 700;
+  font-size: var(--body-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-base);
+}
+
+.cards-texture .cards-texture-card-body a.button:hover,
+.cards-texture .cards-texture-card-body p:has(a:only-child) a:hover {
+  background-color: var(--accent-primary-hover);
+  transform: translateY(-2px);
 }
