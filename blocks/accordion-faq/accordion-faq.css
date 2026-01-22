@@ -9,20 +9,25 @@
 }
 
 .accordion-faq details {
-  border: 1px solid #e0e0e0;
-  border-radius: var(--border-radius-m);
-  background-color: var(--background-color);
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0;
+  background-color: transparent;
   overflow: hidden;
-  transition: box-shadow var(--transition-base);
+  transition: background-color var(--transition-base);
+}
+
+.accordion-faq details:first-of-type {
+  border-top: 1px solid #e0e0e0;
 }
 
 .accordion-faq details:hover {
-  box-shadow: var(--shadow-sm);
+  background-color: var(--section-cream);
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 .accordion-faq details + details {
-  margin-top: var(--spacing-s);
+  margin-top: 0;
 }
 
 .accordion-faq details p {
@@ -32,14 +37,23 @@
 
 .accordion-faq details summary {
   position: relative;
-  padding: var(--spacing-s) var(--spacing-m);
-  padding-right: 56px;
+  padding: var(--spacing-m) var(--spacing-l);
+  padding-right: 60px;
   cursor: pointer;
   list-style: none;
   font-weight: 600;
-  font-size: var(--body-font-size-m);
+  font-size: 18px;
+  line-height: 1.4;
   color: var(--text-color);
   transition: background-color var(--transition-base);
+}
+
+@media (width >= 900px) {
+  .accordion-faq details summary {
+    font-size: 20px;
+    padding: var(--spacing-m) var(--spacing-xl);
+    padding-right: 70px;
+  }
 }
 
 .accordion-faq details[open] summary {
@@ -85,9 +99,9 @@
 }
 
 .accordion-faq details[open] .accordion-faq-item-body {
-  padding-top: var(--spacing-s);
-  border-top: 1px solid #e0e0e0;
-  background-color: var(--background-color);
+  padding: var(--spacing-m) var(--spacing-l);
+  border-top: none;
+  background-color: transparent;
   color: var(--text-color-light);
   font-size: var(--body-font-size-s);
 }
