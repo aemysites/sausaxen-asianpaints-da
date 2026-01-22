@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-cta",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-01-22T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.asianpaints.com/painting-contractors.html",
+    "originPage": "Painting contractors landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "spacious",
+    "purpose": "call-to-action",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + text + button",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "Mid-page call-to-action sections",
+      "Promotional banners",
+      "Search/action prompts",
+      "Contact sections"
+    ],
+    "notSuitableFor": [
+      "Hero sections",
+      "Content-heavy sections",
+      "Multi-column layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/painting-contractors"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-22T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "variantName": "carousel-testimonial",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-01-22T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.asianpaints.com/painting-contractors.html",
+    "originPage": "Painting contractors landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "customer-testimonials",
+    "imagePattern": "avatar"
+  },
+  "contentPattern": {
+    "structure": "customer photo + quote + name + location",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "Customer testimonial sections",
+      "Review showcases",
+      "Success story carousels",
+      "Client feedback sections"
+    ],
+    "notSuitableFor": [
+      "Product carousels",
+      "Image galleries",
+      "Hero carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/painting-contractors"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-22T00:00:00.000Z"
+  }
+}

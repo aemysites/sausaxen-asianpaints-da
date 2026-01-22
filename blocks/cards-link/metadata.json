@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-link",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-01-22T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.asianpaints.com/painting-contractors.html",
+    "originPage": "Painting contractors landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "navigation-cards",
+    "imagePattern": "square"
+  },
+  "contentPattern": {
+    "structure": "image + linked title",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "City/location selection grids",
+      "Category navigation cards",
+      "Expertise area cards",
+      "Service type selection"
+    ],
+    "notSuitableFor": [
+      "Content-heavy cards with descriptions",
+      "Product cards with pricing",
+      "Blog article cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/painting-contractors"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-22T00:00:00.000Z"
+  }
+}

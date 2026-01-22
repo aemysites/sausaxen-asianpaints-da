@@ -1,0 +1,38 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-01-20T06:06:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.asianpaints.com/products/paints-and-textures/interior-walls/royale-play.html",
+    "originPage": "Royale Play product landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "full-width",
+    "purpose": "hero-banner",
+    "imagePattern": "large-background"
+  },
+  "contentPattern": {
+    "structure": "image + logo + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "Product landing pages",
+      "Campaign pages with rotating banners",
+      "Homepage hero sections"
+    ],
+    "notSuitableFor": [
+      "Simple single-image heroes",
+      "Text-only hero sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/products/paints-and-textures/interior-walls/royale-play"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-20T06:06:00.000Z"
+  }
+}
