@@ -1,7 +1,6 @@
 /*
- * Cards Link Block - Linked image cards with title below
+ * Cards Link Block - Linked image cards with title overlay
  * For city selection and expertise categories (carousel style)
- * Matches Asian Paints original: grayscale images, title below
  */
 
 .cards-link {
@@ -29,96 +28,87 @@
   .cards-link > ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     gap: var(--spacing-m);
   }
 }
 
 .cards-link > ul > li {
-  flex: 0 0 180px;
-  border-radius: 0;
-  overflow: visible;
-  transition: transform var(--transition-base);
+  flex: 0 0 160px;
+  position: relative;
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 @media (width >= 600px) {
   .cards-link > ul > li {
-    flex: 0 0 200px;
+    flex: 0 0 180px;
   }
 }
 
 @media (width >= 900px) {
   .cards-link > ul > li {
-    flex: 0 0 229px;
+    flex: 0 0 200px;
   }
 }
 
 .cards-link > ul > li:hover {
   transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
-/* Card Image - Grayscale to match original */
+/* Card Image - Full background */
 .cards-link .cards-link-card-image {
   line-height: 0;
   overflow: hidden;
-  border-radius: 0;
 }
 
 .cards-link > ul > li img {
   width: 100%;
-  aspect-ratio: 229 / 210;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: filter var(--transition-slow), transform var(--transition-slow);
+  transition: transform var(--transition-slow);
   display: block;
-  filter: grayscale(1);
 }
 
 .cards-link > ul > li:hover img {
-  filter: grayscale(0);
-  transform: scale(1.02);
+  transform: scale(1.08);
 }
 
-/* Card Body - Title BELOW image (not overlay) */
+/* Card Body - Overlay on image */
 .cards-link .cards-link-card-body {
-  position: static;
-  padding: 12px 0 0;
-  background: transparent;
-  text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-m) var(--spacing-s);
+  background: linear-gradient(to top, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 30%) 60%, transparent 100%);
+  text-align: center;
+  pointer-events: none;
 }
 
 .cards-link .cards-link-card-body h4,
 .cards-link .cards-link-card-body p {
   margin: 0;
-  font-size: 20px;
+  font-size: var(--body-font-size-m);
   font-weight: 700;
-  color: var(--text-color);
+  color: #fff;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
 }
 
-/* Override button styling - links should be plain text */
-.cards-link .cards-link-card-body a,
-.cards-link .cards-link-card-body a.button {
-  color: var(--text-color);
+.cards-link .cards-link-card-body a {
+  color: #fff;
   text-decoration: none;
   font-weight: 700;
-  font-size: 20px;
+  font-size: var(--body-font-size-m);
   transition: color var(--transition-base);
-  background: none;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
-  display: inline;
+  pointer-events: auto;
 }
 
-.cards-link .cards-link-card-body a:hover,
-.cards-link .cards-link-card-body a.button:hover {
+.cards-link .cards-link-card-body a:hover {
   color: var(--accent-primary);
   text-decoration: none;
-  background: none;
-  background-color: transparent;
-  transform: none;
 }
 
 /* Make entire card clickable */
