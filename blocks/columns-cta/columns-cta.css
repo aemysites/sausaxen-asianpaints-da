@@ -77,7 +77,7 @@
 
 .columns-cta a.button {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 16px 36px;
   background-color: var(--accent-primary);
   color: var(--dark-color);
   border-radius: var(--border-radius-pill);
@@ -85,9 +85,25 @@
   font-size: var(--body-font-size-m);
   text-decoration: none;
   transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
 }
 
 .columns-cta a.button:hover {
   background-color: var(--accent-primary-hover);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Make section more prominent */
+.columns-cta {
+  overflow: hidden;
+}
+
+.columns-cta .columns-cta-img-col {
+  position: relative;
+}
+
+.columns-cta .columns-cta-img-col img {
+  border-radius: var(--border-radius-l);
+  box-shadow: var(--shadow-lg);
 }

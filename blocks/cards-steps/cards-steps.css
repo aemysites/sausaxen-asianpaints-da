@@ -38,7 +38,7 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* Step Number */
+/* Step Number - Large orange styling */
 .cards-steps .cards-steps-number {
   flex-shrink: 0;
   width: auto;
@@ -47,16 +47,19 @@
   align-items: flex-start;
   justify-content: flex-start;
   background-color: transparent;
-  color: var(--accent-red);
-  font-size: 28px;
-  font-weight: 300;
+  color: var(--accent-orange);
+  font-size: 36px;
+  font-weight: 700;
   border-radius: 0;
-  padding-right: var(--spacing-s);
+  padding-right: var(--spacing-m);
+  line-height: 1;
+  min-width: 50px;
 }
 
 @media (width >= 900px) {
   .cards-steps .cards-steps-number {
-    font-size: 32px;
+    font-size: 48px;
+    min-width: 60px;
   }
 }
 

@@ -26,16 +26,18 @@
 }
 
 .columns-stats .columns-stats-item p:first-child {
-  font-size: 42px;
-  font-weight: 300;
+  font-size: 48px;
+  font-weight: 700;
   color: var(--accent-brown);
   margin: 0 0 var(--spacing-xs);
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 @media (width >= 900px) {
   .columns-stats .columns-stats-item p:first-child {
-    font-size: 54px;
+    font-size: 64px;
+    letter-spacing: -2px;
   }
 }
 
